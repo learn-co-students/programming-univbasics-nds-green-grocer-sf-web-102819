@@ -62,6 +62,7 @@ describe "Grocer" do
       cart = [avocado, avocado, find_item_by_name_in_collection('KALE', items)]
 
       consolidated_cart = consolidate_cart(cart)
+      # binding.pry
       av = find_item_by_name_in_collection("AVOCADO", consolidated_cart)
       expect(av[:price]).to eq(3.00)
       expect(av[:clearance]).to eq(true)
